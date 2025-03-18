@@ -1,3 +1,16 @@
+import os
+import time
+from datetime import datetime
+import requests
+
+# Heroku Dyno Time Sync Patch
+try:
+    response = requests.get("http://worldtimeapi.org/api/timezone/Etc/UTC")
+    if response.status_code == 200:
+        utc_time = response.json()['unixtime']
+        os.system(f'date -u @{utc_time}')
+except Exception as e:
+    print("Time sync failed:", e)
 # (c) @AbirHasan2005
 
 # This is Telegram Video Watermark Adder Bot's Source Code.
