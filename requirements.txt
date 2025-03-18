@@ -1,11 +1,4 @@
-Pyrogram==2.0.106
-TgCrypto
-hachoir
-Pillow
-humanfriendly
-motor
-aiofiles
+pyrogram==1.4.16
+moviepy
 aiohttp
-dnspython
-psutil
 requests
